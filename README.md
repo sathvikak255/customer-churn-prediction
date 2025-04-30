@@ -1,44 +1,64 @@
 # 📉 Customer Churn Prediction
 
-This project aims to build a machine learning model that predicts customer churn — i.e., whether a customer is likely to leave a service. Accurate churn prediction can help businesses improve customer retention by proactively addressing at-risk users.
+This project builds a machine learning model to predict whether a customer is likely to churn (i.e., stop using a service). Accurate churn prediction allows businesses to take proactive measures to improve customer retention.
 
 ---
 
-## 📊 Dataset
+## 🧾 Project Objectives
 
-- **Source**: [Kaggle – Telco Customer Churn Dataset](https://www.kaggle.com/blastchar/telco-customer-churn)
-- **Features**: Customer demographics, account information, service usage, and tenure
-- **Target Variable**: `Churn` (Yes/No)
+- Analyze customer behavior data to understand key churn indicators
+- Apply multiple classification algorithms to model churn
+- Evaluate models using relevant metrics focused on recall and F1-score
+- Select the best-performing model for potential deployment
+
+---
+
+## 📊 Dataset Overview
+
+- **Source**: Telco Customer Churn Dataset (Kaggle)
+- **Records**: Customer account info, service usage, tenure, and demographics
+- **Target**: `Churn` (Yes/No)
 
 ---
 
 ## 🧹 Data Preprocessing
 
-- Handled missing values
-- Converted categorical variables to numeric using one-hot encoding
-- Standardized numerical features using `StandardScaler`
-- Split the dataset into training and test sets
+Steps taken:
+
+- Handled missing or inconsistent values
+- Categorical encoding (label and one-hot encoding)
+- Feature scaling with `StandardScaler`
+- Train-test split using stratification to preserve churn ratio
 
 ---
 
-## 🧠 Models Used
+## 🧠 Machine Learning Models Used
 
 - Logistic Regression
 - Decision Tree
 - Random Forest
-- XGBoost
-- K-Nearest Neighbors (KNN)
 - Support Vector Machine (SVM)
+- K-Nearest Neighbors (KNN)
+- XGBoost
+
+Each model was trained and evaluated on the same dataset for comparison.
 
 ---
 
-## ⚖️ Model Evaluation
+## 📈 Evaluation Metrics
 
-Evaluation metrics include:
+Models were evaluated using:
 
+- **Accuracy**
+- **Precision**
+- **Recall** (key metric for churn detection)
+- **F1-score**
+- **ROC-AUC Score**
 - **Confusion Matrix**
-- **Classification Report** (Precision, Recall, F1-score)
-- **ROC-AUC Curve**
+
+---
+
+## ⚖️ Sample Results
 
 | Model               | Accuracy | Precision | Recall | F1 Score |
 |--------------------|----------|-----------|--------|----------|
@@ -48,34 +68,42 @@ Evaluation metrics include:
 
 ---
 
-## 📈 Visualizations
+## 🛠️ Modules to Install
 
-### Churn Distribution
+Make sure you have Python installed. Then install the following libraries:
 
-![Churn Distribution](images/churn_distribution.png)
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost
+```
+## 🗂️ File Structure
+```bash
+customer-churn-prediction/
+├── churn_prediction.ipynb    # Jupyter notebook with code and output
+├── README.md                 # Project overview
+```
+## 🚀 Future Enhancements
 
+- Perform hyperparameter tuning using GridSearchCV or RandomizedSearchCV
+- Try ensemble techniques or stacking
+- Implement deep learning models (e.g., ANN)
+- Deploy as a Streamlit or Flask web application
+- Add user input interface for real-time predictions
+
+## ▶️ How to Run the Project
+
+1. Clone the repository
+   ```bash
+   git clone https://github.com/sathvikak255/customer-churn-prediction.git
+   cd customer-churn-prediction
+   ```
+2. Install required modules (see above)
+3. Launch the Jupyter Notebook:
+   ```bash
+   jupyter notebook churn_prediction.ipynb
+   ```
+
+
+   
 ---
 
-### Feature Importance (Random Forest)
-
-![Feature Importance](images/feature_importance.png)
-
----
-
-### Confusion Matrix
-
-![Confusion Matrix](images/confusion_matrix.png)
-
----
-
-## 🛠️ Technologies Used
-
-- Python
-- pandas, numpy, seaborn, matplotlib
-- scikit-learn
-- XGBoost
-
----
-
-## 📁 File Structure
-
+Let me know if you'd like to add anything else like model comparison charts or deployment instructions later!
