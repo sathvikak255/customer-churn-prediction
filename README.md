@@ -105,5 +105,3 @@ customer-churn-prediction/
 
    
 ---
-
-Let me know if you'd like to add anything else like model comparison charts or deployment instructions later!
